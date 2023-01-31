@@ -1,0 +1,90 @@
+.container {
+    background-color: var(--color-grey-light-2);
+    min-height: 50vh;
+    max-width: 120rem;
+    margin: 8rem auto;
+    box-shadow: var(--shadow-dark);
+
+    @media only screen and (max-width: 75em) {
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+    }
+        
+    
+}
+
+.header {
+    font-size: 1.4rem;
+    height: 7rem;
+    background-color: #fff;
+    border-bottom: var(--line);
+
+    //flexbox user
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media only screen and (max-width: $bg-smallest) {
+        flex-wrap: wrap;
+        height: 10rem;
+        align-content: space-around;
+    }
+}
+
+.content {
+    display: flex;
+
+    @media only screen and (max-width: $bg-small) {
+        flex-direction: column;
+    }   
+
+    .sidebar {
+        background-color: var(--color-grey-dark-1);
+    
+        flex: 0 0 18%; // 0for grow, 0 for shrink, 18% for base width
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .hotel-view {
+        background-color: #fff;
+        flex: 1; // 1 for grow, so it grows as much as it can
+    }
+}
+
+.details {
+    font-size: 1.4rem;
+    display: flex;
+    padding: 4.5rem;
+    background-color: var(--color-grey-light-1);
+    border-bottom: var(--line);
+    @media only screen and (max-width: $bg-large) {
+        padding: 3rem;
+    }
+
+    @media only screen and (max-width: $bg-smallest) {
+        flex-direction: column;
+    }
+}
+
+.description {
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+    padding: 4rem;
+    box-shadow: var(--shadow-light);
+    background-color: #fff;
+
+    @media only screen and (max-width: $bg-smallest) {
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+}
+
+.user-reviews {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
